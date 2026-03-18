@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy.pool import NullPool
 load_dotenv()
 
 Base = declarative_base()
@@ -12,7 +12,9 @@ Base = declarative_base()
 DATABASE_URL = str(os.getenv("DATABASE_URI", ""))
 async_engine = create_async_engine(DATABASE_URL, echo=False, connect_args={
     "statement_cache_size": 0
-}, pool_pre_ping=True, pool_recycle=1800)
+}, 
+pool_pre_ping=NullPool #Only For serverless DB to connect db every request
+)
 
 AsyncSessionLocal = async_sessionmaker(async_engine, expire_on_commit=False)
 
