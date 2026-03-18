@@ -12,7 +12,7 @@ Base = declarative_base()
 DATABASE_URL = str(os.getenv("DATABASE_URI", ""))
 async_engine = create_async_engine(DATABASE_URL, echo=False, connect_args={
     "statement_cache_size": 0
-})
+}, pool_pre_ping=True, pool_recycle=1800)
 
 AsyncSessionLocal = async_sessionmaker(async_engine, expire_on_commit=False)
 
