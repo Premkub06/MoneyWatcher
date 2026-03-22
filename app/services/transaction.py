@@ -56,8 +56,8 @@ class TransactionService:
             db, account_data.id, account_data.balance + amount
         )
 
-        # Create transaction (note ใส่เมื่อ category เป็น Other)
-        note = payload.get("note") if category_name == "Other" else None
+        # Create transaction
+        note = payload.get("note")
         new_transaction = Transaction(
             account_id=account_data.id,
             category_id=category.id,
