@@ -25,3 +25,9 @@ class AccountRepo:
         db.add(data)
         await db.commit()
         return data
+
+    async def get_all(self, db: AsyncSession) -> list[Account]:
+        """List all accounts."""
+        stmt = select(Account)
+        result = await db.execute(stmt)
+        return list(result.scalars().all())

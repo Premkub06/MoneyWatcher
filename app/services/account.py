@@ -42,3 +42,7 @@ class AccountService:
             account.balance = new_balance
             await self.create_or_update_account(db, data=account)
         return account
+
+    async def get_all_accounts(self, db: AsyncSession) -> list[Account]:
+        """List all accounts."""
+        return await self.repo.get_all(db)
