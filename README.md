@@ -25,7 +25,6 @@ KTB Notification → MacroDroid → Webhook API → Bronze (raw) → Silver (cle
 - **Alembic** for migrations
 - **MacroDroid** for Android notification capture
 - **Grafana** for visualization
-- **Render** for hosting (auto-deploy on push)
 
 ## Project Structure
 
@@ -57,8 +56,11 @@ MoneyWatcher/
 │       ├── category_cache.py        # In-memory cache (O(1) lookup)
 │       ├── raw_data.py
 │       └── transaction.py           # ETL: raw → cleaned transaction
-└── migrations/
-    └── versions/                    # Alembic migrations + seed data
+├── migrations/
+│   └── versions/                    # Alembic migrations + seed data
+└── macrodroid/
+    ├── MoneyWatcher_Noti.macro       # Macro 1 — notification capture
+    └── MoneyWatcher_Selector.macro   # Macro 2 — category selection & webhook
 ```
 
 ## Database Schema
@@ -91,12 +93,16 @@ MoneyWatcher/
 
 ## MacroDroid Setup
 
-### Macro 1 — Notification Capture
+Import the two macro exports in [`macrodroid/`](macrodroid/) directly into MacroDroid — no need to build them from scratch.
+
+**Important:** both macros share a global `webhook_url` variable (defaults to `http://localhost:8000`). It's only set in one place — the "set global variable" action in `MoneyWatcher_Noti.macro` — so just edit it there to point at wherever the API is actually reachable (e.g. your server's public URL or LAN IP); both macros pick up the change since it's a shared global variable.
+
+### Macro 1 — `MoneyWatcher_Noti.macro` (Notification Capture)
 
 - **Trigger**: Krungthai app notification
 - **Action**: Create a persistent notification with amount info
 
-### Macro 2 — Category Selection & Webhook
+### Macro 2 — `MoneyWatcher_Selector.macro` (Category Selection & Webhook)
 
 - **Trigger**: Click the persistent notification
 - **Actions**:

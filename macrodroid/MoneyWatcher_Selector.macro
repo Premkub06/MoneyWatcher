@@ -1,0 +1,972 @@
+{
+  "globalVariables": [
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": false,
+        "variableType": 4,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": false,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 0.0,
+      "m_intValue": 0,
+      "m_name": "category",
+      "m_stringValue": "",
+      "m_type": 2,
+      "supportsInput": false,
+      "supportsOutput": true
+    },
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": true,
+        "variableType": 5,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": true,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 0.0,
+      "m_intValue": 0,
+      "m_name": "display_list",
+      "m_stringValue": "",
+      "m_type": 5,
+      "supportsInput": false,
+      "supportsOutput": true
+    },
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": false,
+        "variableType": 4,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": true,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 0.0,
+      "m_intValue": 0,
+      "m_name": "note",
+      "m_stringValue": "",
+      "m_type": 2,
+      "supportsInput": false,
+      "supportsOutput": true
+    },
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": false,
+        "variableType": 4,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": true,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 0.0,
+      "m_intValue": 0,
+      "m_name": "noti_body",
+      "m_stringValue": "test body",
+      "m_type": 2,
+      "supportsInput": false,
+      "supportsOutput": true
+    },
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": false,
+        "variableType": 4,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": true,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 0.0,
+      "m_intValue": 0,
+      "m_name": "noti_title",
+      "m_stringValue": "test app title",
+      "m_type": 2,
+      "supportsInput": false,
+      "supportsOutput": true
+    },
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": false,
+        "variableType": 4,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": true,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 12345.0,
+      "m_intValue": 12345,
+      "m_name": "timestamp",
+      "m_stringValue": "",
+      "m_type": 1,
+      "supportsInput": false,
+      "supportsOutput": true
+    },
+    {
+      "dictionary": {
+        "entries": [],
+        "isArray": false,
+        "variableType": 4,
+        "type": "Dictionary"
+      },
+      "isActionBlockWorkingVar": true,
+      "isLocalVar": false,
+      "isSecure": false,
+      "m_booleanValue": false,
+      "m_decimalValue": 0.0,
+      "m_intValue": 0,
+      "m_name": "webhook_url",
+      "m_stringValue": "http://localhost:8000",
+      "m_type": 2,
+      "supportsInput": false,
+      "supportsOutput": true
+    }
+  ],
+  "macro": {
+    "aiGenerated": 0,
+    "breakpoints": [],
+    "disabledTimestamp": 0,
+    "exportedActionBlocks": [],
+    "forceEvenIfNotEnabledTimestamp": 0,
+    "isActionBlock": false,
+    "isExtra": false,
+    "isFavourite": false,
+    "lastEditedTimestamp": 1783250538041,
+    "localVariables": [
+      {
+        "dictionary": {
+          "entries": [],
+          "isArray": false,
+          "variableType": 4,
+          "type": "Dictionary"
+        },
+        "isActionBlockWorkingVar": false,
+        "isLocalVar": true,
+        "isSecure": false,
+        "m_booleanValue": false,
+        "m_decimalValue": 0.0,
+        "m_intValue": 0,
+        "m_name": "json_response",
+        "m_stringValue": "",
+        "m_type": 2,
+        "supportsInput": false,
+        "supportsOutput": true
+      },
+      {
+        "dictionary": {
+          "entries": [
+            {
+              "key": "entries",
+              "variable": {
+                "entries": [
+                  {
+                    "key": "0",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 1.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Food",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "🍔 Food",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "expense",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  },
+                  {
+                    "key": "1",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 2.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Travel",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "🚗 Travel",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "expense",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  },
+                  {
+                    "key": "2",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 3.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Shopping",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "🛒 Shopping",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "expense",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  },
+                  {
+                    "key": "3",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 4.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Bill",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "📄 Bill",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "expense",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  },
+                  {
+                    "key": "4",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 5.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Transfer IN",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "📥 Transfer IN",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "income",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  },
+                  {
+                    "key": "5",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 6.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Transfer OUT",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "📤 Transfer OUT",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "expense",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  },
+                  {
+                    "key": "6",
+                    "variable": {
+                      "entries": [
+                        {
+                          "key": "id",
+                          "variable": {
+                            "decimalValue": 7.0,
+                            "variableType": 3,
+                            "type": "DecimalValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "name",
+                          "variable": {
+                            "textValue": "Other",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "display_name",
+                          "variable": {
+                            "textValue": "📦 Other",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        },
+                        {
+                          "key": "type",
+                          "variable": {
+                            "textValue": "other",
+                            "variableType": 2,
+                            "type": "StringValue"
+                          },
+                          "variableType": 11,
+                          "type": "DictionaryEntry"
+                        }
+                      ],
+                      "isArray": false,
+                      "variableType": 4,
+                      "type": "Dictionary"
+                    },
+                    "variableType": 11,
+                    "type": "DictionaryEntry"
+                  }
+                ],
+                "isArray": true,
+                "variableType": 5,
+                "type": "Dictionary"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            }
+          ],
+          "isArray": false,
+          "parents": [],
+          "variableType": 4,
+          "parentKeys": [],
+          "type": "Dictionary"
+        },
+        "isActionBlockWorkingVar": false,
+        "isLocalVar": true,
+        "isSecure": false,
+        "m_booleanValue": false,
+        "m_decimalValue": 0.0,
+        "m_intValue": 0,
+        "m_name": "category_list",
+        "m_stringValue": "",
+        "m_type": 4,
+        "supportsInput": false,
+        "supportsOutput": true
+      },
+      {
+        "dictionary": {
+          "entries": [
+            {
+              "key": "0",
+              "variable": {
+                "textValue": "🍔 Food",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            },
+            {
+              "key": "1",
+              "variable": {
+                "textValue": "🚗 Travel",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            },
+            {
+              "key": "2",
+              "variable": {
+                "textValue": "🛒 Shopping",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            },
+            {
+              "key": "3",
+              "variable": {
+                "textValue": "📄 Bill",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            },
+            {
+              "key": "4",
+              "variable": {
+                "textValue": "📥 Transfer IN",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            },
+            {
+              "key": "5",
+              "variable": {
+                "textValue": "📤 Transfer OUT",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            },
+            {
+              "key": "6",
+              "variable": {
+                "textValue": "📦 Other",
+                "variableType": 2,
+                "type": "StringValue"
+              },
+              "variableType": 11,
+              "type": "DictionaryEntry"
+            }
+          ],
+          "isArray": true,
+          "parents": [],
+          "variableType": 5,
+          "parentKeys": [],
+          "type": "Dictionary"
+        },
+        "isActionBlockWorkingVar": false,
+        "isLocalVar": true,
+        "isSecure": false,
+        "m_booleanValue": false,
+        "m_decimalValue": 0.0,
+        "m_intValue": 0,
+        "m_name": "display_list",
+        "m_stringValue": "",
+        "m_type": 5,
+        "supportsInput": false,
+        "supportsOutput": true
+      }
+    ],
+    "localVarsAlphabetical": true,
+    "m_GUID": -8204094309532686085,
+    "m_actionList": [
+      {
+        "bgColor": -13619152,
+        "buttonStyle": 1,
+        "continueMacroOnBackPress": true,
+        "customEntries": [
+          {
+            "color": -1118482,
+            "guid": -5708773147163807675,
+            "isBold": false,
+            "isItalic": false,
+            "key": "",
+            "text": "{lvjson=category_list[entries][{iterator_key}]}",
+            "value": ""
+          }
+        ],
+        "defaultButtonIndex": 5,
+        "defaultKey": "0",
+        "defaultTimeOutSecs": 5,
+        "dictionaryKeys": {
+          "keys": []
+        },
+        "dictionaryVarName": "display_list",
+        "hasDefault": false,
+        "message": "บันทึกรายการ: {v=noti_body}",
+        "option": 1,
+        "preventBackButtonClose": true,
+        "saveValueVariable": {
+          "variableName": "category",
+          "keys": {
+            "keys": []
+          }
+        },
+        "showDictionaryKeys": false,
+        "textColor": -1118482,
+        "disableLogging": false,
+        "m_SIGUID": -9103349622175789931,
+        "m_classType": "SelectionDialogAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      },
+      {
+        "m_option": 1,
+        "m_text": "{v=category}",
+        "m_textManipulation": {
+          "type": "ReplaceAllManipulation",
+          "params": [
+            "[^\\w\\sก-๙]",
+            ""
+          ]
+        },
+        "variableName": "category",
+        "disableLogging": true,
+        "m_SIGUID": -6585790997671705179,
+        "m_classType": "TextManipulationAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      },
+      {
+        "m_option": 5,
+        "m_text": "{v=category}",
+        "m_textManipulation": {
+          "type": "TrimManipulation",
+          "params": []
+        },
+        "variableName": "category",
+        "disableLogging": false,
+        "m_SIGUID": -8432051608853839006,
+        "m_classType": "TextManipulationAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      },
+      {
+        "booleanDictionaryKeys": {
+          "keys": []
+        },
+        "dictionaryKeys": [],
+        "dictionaryOrArrayType": -1,
+        "existingManualKeyType": 0,
+        "m_booleanInvert": false,
+        "m_darkMode": -1,
+        "m_doubleRandomMax": 0.0,
+        "m_doubleRandomMin": 0.0,
+        "m_falseLabel": "False",
+        "m_intExpression": false,
+        "m_intRandom": false,
+        "m_intRandomMax": 0,
+        "m_intRandomMin": 0,
+        "m_intValueDecrement": false,
+        "m_intValueIncrement": false,
+        "m_newBooleanValue": false,
+        "m_newDoubleValue": 0.0,
+        "m_newIntValue": 0,
+        "m_newStringValue": "",
+        "m_trueLabel": "True",
+        "m_userPrompt": false,
+        "m_userPromptEmptyAtStart": false,
+        "m_userPromptPassword": false,
+        "m_userPromptPasswordToggle": false,
+        "m_userPromptShowCancel": true,
+        "m_userPromptStopAfterCancel": true,
+        "m_variable": {
+          "dictionary": {
+            "entries": [],
+            "isArray": false,
+            "variableType": 4,
+            "type": "Dictionary"
+          },
+          "isActionBlockWorkingVar": true,
+          "isLocalVar": false,
+          "isSecure": false,
+          "m_booleanValue": false,
+          "m_decimalValue": 0.0,
+          "m_intValue": 0,
+          "m_name": "note",
+          "m_stringValue": "",
+          "m_type": 2,
+          "supportsInput": false,
+          "supportsOutput": true
+        },
+        "disableLogging": false,
+        "m_SIGUID": -7104691343206438777,
+        "m_classType": "SetVariableAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      },
+      {
+        "booleanDictionaryKeys": {
+          "keys": []
+        },
+        "dictionaryKeys": [],
+        "dictionaryOrArrayType": -1,
+        "existingManualKeyType": 0,
+        "m_booleanInvert": false,
+        "m_darkMode": 0,
+        "m_doubleRandomMax": 0.0,
+        "m_doubleRandomMin": 0.0,
+        "m_falseLabel": "False",
+        "m_intExpression": false,
+        "m_intRandom": false,
+        "m_intRandomMax": 0,
+        "m_intRandomMin": 0,
+        "m_intValueDecrement": false,
+        "m_intValueIncrement": false,
+        "m_newBooleanValue": false,
+        "m_newDoubleValue": 0.0,
+        "m_newIntValue": 0,
+        "m_newStringValue": "",
+        "m_trueLabel": "True",
+        "m_userPrompt": true,
+        "m_userPromptEmptyAtStart": false,
+        "m_userPromptMessage": "",
+        "m_userPromptPassword": false,
+        "m_userPromptPasswordToggle": false,
+        "m_userPromptShowCancel": true,
+        "m_userPromptStopAfterCancel": true,
+        "m_userPromptTitle": "Other note",
+        "m_variable": {
+          "dictionary": {
+            "entries": [],
+            "isArray": false,
+            "variableType": 4,
+            "type": "Dictionary"
+          },
+          "isActionBlockWorkingVar": true,
+          "isLocalVar": false,
+          "isSecure": false,
+          "m_booleanValue": false,
+          "m_decimalValue": 0.0,
+          "m_intValue": 0,
+          "m_name": "note",
+          "m_stringValue": "",
+          "m_type": 2,
+          "supportsInput": false,
+          "supportsOutput": true
+        },
+        "disableLogging": false,
+        "m_SIGUID": -7014468888650836933,
+        "m_classType": "SetVariableAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      },
+      {
+        "requestConfig": {
+          "allFilesAccessPath": "",
+          "allowAnyCertificate": false,
+          "basicAuthEnabled": false,
+          "basicAuthPassword": "",
+          "basicAuthUsername": "",
+          "blockNextAction": false,
+          "clientCertEnabled": false,
+          "clientCertKeyStoreDisplayName": "",
+          "clientCertKeyStoreUri": "",
+          "clientCertPassword": "",
+          "contentBodyDynamicFileName": "",
+          "contentBodyFileDisplayName": "",
+          "contentBodyFileUri": "",
+          "contentBodyFolderDisplayName": "",
+          "contentBodyFolderUri": "",
+          "contentBodySource": 0,
+          "contentBodyText": "{\n   \"title\":\"{v=noti_title}\",\n   \"notification\":\"{v=noti_body}\",\n   \"category\":\"{v=category}\",\n   \"timestamp\":{v=timestamp},\n   \"note\":\"{v=note}\"\n}",
+          "contentType": "application/json",
+          "followRedirects": true,
+          "headerParams": [],
+          "localFileUri": "",
+          "prettifyJson": false,
+          "proxyEnabled": false,
+          "proxyHost": "",
+          "proxyPort": 8080,
+          "proxyType": 0,
+          "queryParams": [],
+          "requestTimeOutSeconds": 600,
+          "requestType": 1,
+          "saveResponseAllFilesAccessPath": "",
+          "saveResponseFileName": "",
+          "saveResponseFolderPathDisplayName": "",
+          "saveResponseFolderPathUri": "",
+          "saveResponseType": 0,
+          "saveResponseUseAllFilesAccess": false,
+          "saveReturnCodeToVariable": false,
+          "saveReturnHeadersToVariable": false,
+          "urlToOpen": "{v=webhook_url}/api/v1/webhook/krungthai",
+          "useAllFilesAccess": false,
+          "useLocalFileUri": false,
+          "useStaticContentBodyFile": true
+        },
+        "disableLogging": false,
+        "m_SIGUID": -8371785649145913132,
+        "m_classType": "HttpRequestAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      },
+      {
+        "enableRegex": false,
+        "ignoreCase": true,
+        "m_ageInSeconds": 0,
+        "m_applicationNameList": [
+          "MacroDroid"
+        ],
+        "m_clearPersistent": false,
+        "m_excludes": false,
+        "m_matchOption": 2,
+        "m_matchText": "{v=noti_body}",
+        "m_option": 1,
+        "m_packageNameList": [
+          "com.arlosoft.macrodroid"
+        ],
+        "matchOptionMessage": 0,
+        "matchOptionTitle": 0,
+        "separateTitleAndMessage": false,
+        "disableLogging": false,
+        "m_SIGUID": -6334952691903575066,
+        "m_classType": "ClearNotificationsAction",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      }
+    ],
+    "m_category": "Uncategorized",
+    "m_constraintList": [],
+    "m_description": "",
+    "m_descriptionOpen": false,
+    "m_enabled": true,
+    "m_excludeLog": false,
+    "m_headingColor": 0,
+    "m_isOrCondition": false,
+    "m_name": "MoneyWatcher_Selector",
+    "m_triggerList": [
+      {
+        "enableRegex": false,
+        "ignoreCase": true,
+        "m_applicationNameList": [
+          "MacroDroid"
+        ],
+        "m_exactMatch": false,
+        "m_excludeApps": false,
+        "m_excludes": false,
+        "m_ignoreOngoing": false,
+        "m_option": 0,
+        "m_packageNameList": [
+          "com.arlosoft.macrodroid"
+        ],
+        "m_soundOption": 0,
+        "m_supressMultiples": true,
+        "m_textContent": "{v=noti_body}",
+        "matchOptionMessage": 0,
+        "matchOptionTitle": 0,
+        "separateTitleAndMessage": false,
+        "disableLogging": false,
+        "m_SIGUID": -8537026023653781941,
+        "m_classType": "NotificationTrigger",
+        "m_comment": "",
+        "m_constraintList": [],
+        "m_isDisabled": false,
+        "m_isOrCondition": false
+      }
+    ]
+  },
+  "macroExportVersion": 1
+}
