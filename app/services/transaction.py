@@ -1,5 +1,6 @@
 import json
 import re
+from datetime import datetime, timedelta, timezone
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -75,3 +76,21 @@ class TransactionService:
     async def create_transaction(self, db: AsyncSession, transaction: Transaction):
         """Save a transaction to DB."""
         return await self.repo.create_transaction(db, transaction)
+
+    async def get_recent_transactions(
+        self, db: AsyncSession, days: int = 7, category_name: str | None = None
+    ) -> list[dict]:
+        """List recent transactions as plain dicts (for the Telegram chat tool)."""
+        since = datetime.now(timezone.utc) - timedelta(days=days)
+        transactions = await self.repo.get_recent(db, since, category_name)
+        return [
+            {
+                "id": t.id,
+                "amount": t.amount,
+                "category": t.category.name if t.category else None,
+                "account_provider": t.account.provider if t.account else None,
+                "note": t.note,
+                "created_at": t.created_at.isoformat() if t.created_at else None,
+            }
+            for t in transactions
+        ]
