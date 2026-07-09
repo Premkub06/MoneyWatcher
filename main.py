@@ -5,6 +5,7 @@ from fastapi import FastAPI
 
 from app.api.v1 import category, webhook
 from app.database.init_data import init_master_data
+from app.telegram.router import router as telegram_router
 
 load_dotenv()
 
@@ -29,6 +30,7 @@ app = FastAPI(
 
 app.include_router(webhook.router, prefix="/api/v1/webhook", tags=["Webhook"])
 app.include_router(category.router, prefix="/api/v1/categories", tags=["Categories"])
+app.include_router(telegram_router, prefix="/api/v1/telegram", tags=["Telegram"])
 
 
 @app.get("/")
