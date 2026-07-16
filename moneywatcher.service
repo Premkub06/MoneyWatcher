@@ -1,0 +1,29 @@
+[Unit]
+Description=MoneyWatcher FastAPI Backend
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=keerati
+Group=keerati
+WorkingDirectory=/home/keerati/MoneyWatcher
+EnvironmentFile=/home/keerati/MoneyWatcher/.env
+ExecStart=/home/keerati/MoneyWatcher/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=moneywatcher
+
+MemoryMax=300M
+CPUQuota=80%
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/keerati/MoneyWatcher
+
+[Install]
+WantedBy=multi-user.target
+
